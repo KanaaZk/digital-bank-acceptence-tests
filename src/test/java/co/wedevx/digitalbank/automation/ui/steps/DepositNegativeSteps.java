@@ -27,7 +27,7 @@ public class DepositNegativeSteps {
     public void i_am_logged_in_as_a_registered_user_to_the_digital_bank_home_page() {
         driver = getDriver();
         driver.manage().window().maximize();
-        driver.get(ConfigReader.getPropertiesValue("digitalbank.homepageurl"));
+        driver.get(ConfigReader.getPropertiesValue("digitalBank.homepageUrl"));
         assertEquals("Digital Bank", driver.getTitle(), "Registration title is mismatch");
 
         loginPage = new LoginPage(driver);
